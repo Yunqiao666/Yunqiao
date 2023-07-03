@@ -1,34 +1,44 @@
-#define _CRT_SECURE_NO_WARNINGS 1
-#include<stdio.h>
-//字面常量
-#define MAX 10000
-//int main()
-//{
-//	3.14;
-//	10;
-//	"a";
-//	"ctq";
-//	"崔";
-//const修饰的常变量
-//	const int 崔云乔 = 20;
-	
-//	printf("崔云乔=%d\n", 崔云乔);
-//	int n = MAX;
-//	printf("n=%d\n", n);
-
-//	return 0;
-//}
-enum Sex 
+#include"game.h"
+void manu()
 {
-	MALE,
-	FEMALE,
-	SECRET,
-};
+	printf("********************************\n");
+	printf("******     《三子棋》     ******\n");
+	printf("********************************\n");
+	printf("******     1.开始游戏     ******\n");
+	printf("******     0.退出游戏     ******\n");
+	printf("********************************\n");
+}
+void game()
+{
+	char board[ROW][COL];//储存数据到二维数组
+	initialize(board, ROW, COL);//初始化棋盘为空格
+	printfboard(board, ROW, COL);//打印棋盘
+	//玩家走
+	//电脑走
+}
 int main()
 {
-	enum Sex s = MALE;
-	printf("%d\n", MALE);
-	printf("%d\n", FEMALE);
-	printf("%d\n", SECRET);
+	int input = 0;
+	do
+	{
+		manu();
+		printf("请选择:>>");
+		scanf("%d",&input);
+		switch (input)
+		{ 
+		case 1:
+			game();
+			break;
+		case 0:
+			printf("退出游戏\n");
+			break;
+        default:
+			printf("输入错误请重新输入\n");
+			system("cls");
+			break;
+		}
+
+	}
+	while (input);
 	return 0;
 }
