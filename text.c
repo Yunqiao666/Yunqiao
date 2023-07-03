@@ -13,7 +13,32 @@ void game()
 	char board[ROW][COL];//储存数据到二维数组
 	initialize(board, ROW, COL);//初始化棋盘为空格
 	printfboard(board, ROW, COL);//打印棋盘
-	//玩家走
+	char o = 0;
+	while(1)
+	{
+		plearmove(board, ROW, COL);//玩家走
+		printfboard(board, ROW, COL);//打印棋盘
+		o= IsWin(board, ROW, COL);
+		if (o != 'c')
+		break;
+		computermove(board,ROW,COL);//电脑走
+		printfboard(board, ROW, COL);//打印棋盘
+		o= IsWin(board, ROW, COL);
+		if (o != 'c')
+		break;
+	}
+	if (o = '*')
+	{
+		printf("恭喜您，您赢了!\n");
+	}
+	else if (o = '#')
+	{
+		printf("很遗憾，您惜败!\n");
+	}
+	else if (o = 'Q')
+	{
+		printf("平局!\n");
+	}
 	//电脑走
 }
 int main()
