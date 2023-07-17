@@ -2,7 +2,7 @@
 #include<stdio.h>
 //int main()
 //{
-//	(*(void(*)())0)();
+//	(*(void(*)())0)();  VV 
 //	return 0;
 //}
 //int mian()
