@@ -10,3 +10,4 @@
 //	void(*sighnal(int, void(*)(int)))(int);
 //	return 0;
 //}
+HJGKUL
