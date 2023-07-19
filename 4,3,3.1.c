@@ -7,6 +7,6 @@
 //}
 //int mian()
 //{
-//	void(*sighnal(int, void(*)(int)))(int);
+//	void(*sighnal( int, void(*)(int)))(int);
 //	return 0;
 //}
